@@ -22,13 +22,13 @@ const listings = require("./routes/listing.js");
 const reviews= require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-const uri = process.env.ATLAS_DB_URL;
+const uri = process.env.ATLAS_URL;
 main()
   .then(() => {
     console.log("connected to DB");
   })
   .catch((err) => {
-    console.log(err);
+      console.log(err);
   });
 
 async function main() {
@@ -108,7 +108,7 @@ app.use ((err,req,res,next)=> {
 })
 
 
-const port = process.env.PORT || 8081;
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+
+app.listen(8085, () => {
+  console.log("server is listing to the port 8085");
 });
