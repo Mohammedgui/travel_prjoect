@@ -16,6 +16,7 @@ router.route("/")
 
 //new route
 router.get("/new", isLoggedIn,listingcontroller.rendernewform);
+router.get("/search",listingcontroller.Search);
 
 
 router.route("/:id")

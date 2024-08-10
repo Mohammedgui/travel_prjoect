@@ -106,3 +106,76 @@ body {
     height: 400px;
     width: 80vh;
   }
+  .back {
+    margin-left: 1rem;
+  }
+  .btn-edit {
+    display: flex;
+    flex-wrap:wrap;
+
+  }
+  .searchbar {
+  margin-left: 24rem;
+  }
+  .searchplace {
+    width: 200px !important;
+    text-align: center !important;
+  }
+  /* Base styles for all devices */
+
+/* Styles for mobile phones */
+.txt {
+    color: #222222;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    text-transform: lowercase !important;
+}
+.search  {
+   margin-left: 24rem !important;
+   
+}
+@media screen and (max-width:360px)
+{
+   .search-place {
+    width: 95px !important;
+    margin-left: -20.5rem;
+   }
+  .home {
+    display: none !important;
+    
+  }
+   .search {
+    margin-top: -2.5rem;
+   }
+   .users {
+    background-color: rgb(246, 246, 247);
+    margin-left: 14rem;
+    height: 160px;
+    width: 80px !important;
+
+   }
+}
+.search-place {
+    border-radius: 4rem !important;
+}
+@media screen and (max-width:430px)
+{
+   .search-place {
+    width: 95px !important;
+    margin-left: -20.5rem;
+   }
+  .home {
+    display: none !important;
+  }
+   .search {
+    margin-top: -2.5rem;
+   }
+   .users {
+    background-color: rgb(246, 246, 247);
+    margin-left: 14rem;
+    height: 160px;
+    width: 80px !important;
+
+   }
+}

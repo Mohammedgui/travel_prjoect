@@ -72,3 +72,20 @@ module.exports.deleteListing = async (req, res) => {
     req.flash("success","listing is deleted");
     res.redirect("/listings");
   };
+  module.exports.Search= async(req,res) => {
+    try {
+      // Assuming Listing is your model and 'location' is a field in your collection
+      let listing = await Listing.findOne({ location: req.body.location }); // Use `location` directly here
+    
+      if (!listing) {
+        return res.redirect("/listings"); // Redirect and exit the function
+      }
+    
+      // If listing is found, send a response
+      res.send("found");
+    } catch (error) {
+      // Handle errors
+      console.error(error); // Log the error for debugging
+      res.status(500).send("Internal server error"); // Send an error response
+    }
+  }
