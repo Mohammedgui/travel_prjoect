@@ -7,16 +7,62 @@ body {
   .container {
       flex: 1;
   }
+ 
   .navbar {
-        height: 5rem;
+    
+        height: 6rem;
       background-color: white;
   }
-  .fa-compass {
-      color: #fe424d;
-      font-size: 2rem;
+  .allfoot {
+    background-color: #ebebeb;
   }
+  .fa-compass {
+   color: #8644A2;
+      font-size: 3rem;
+      margin-right: 1rem;
+  }
+  .mm-infoo {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  
+  .mm-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .links-info {
+    margin-left: 4rem;
+  }
+  .amaz {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .amazi {
+    margin-top: 2rem;
+  }
+  .extra-infoo {
+    margin-top: 2rem;
+  }
+  .footer-infoo {
+    margin-left: 1.5rem;
+  }
+ .footer-info {
+    margin-left: 6rem;
+ }
   .nav-link {
       color: #222222 !important;
+  }
+  .m-info {
+    background-color: #ebebeb;
+  }
+  .contact-support {
+   color:black ;
+   text-decoration: none;
+   &:hover {
+    text-decoration: underline;
+   }
   }
   .f-info-links a {
       text-decoration: none;
@@ -40,6 +86,14 @@ body {
   .f-info-links a:hover {
       text-decoration: underline;
   }
+ 
+  .more-info {
+    margin-top: 4rem;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
   .f-info {
       text-align: center;
       height: 8rem;
@@ -54,6 +108,9 @@ body {
   .listing-card {
       border: none !important;
       margin-bottom: 2rem;
+    margin-left: 10rem;
+    
+
   }
   .card-img-top {
       width: 100% !important;
@@ -78,15 +135,48 @@ body {
       background-color: white;
   }
   .add-btn {
-      background-color: #fe424d !important;
+      background-color: #BC7FCD !important;
       border: none !important;
   }
   /* edit-page */
   .edit-btn {
-      background-color: #fe424d !important;
+      background-color: #BC7FCD!important;
       border: none !important;
   }
+ 
+  .acca {
   
+    width: 950px;
+    height: 780px;
+   background-color: aliceblue;
+   margin-top: 2rem !important;
+   margin-left: 4rem;
+  }
+ .acca,p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+ }
+  .mar-l {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .chimne {
+ font-size: 4rem;
+ margin-top: 2rem;
+ margin-left:2rem;
+  }
+  .acc-one {
+    height: 800px;
+    width: 950px;
+    background-color: #F7E7DC;
+   
+    margin-top: 3.5rem !important;
+    margin-left: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .house-fi {
+    text-align: center;
+  }
   /* show-page */
   .show-img {
       height: 30vh;
@@ -100,6 +190,9 @@ body {
       padding-left: 0;
       padding-right: 0;
   }
+  .click-offer {
+    margin-left: 1rem;
+  }
   
   /* map */
   #map {
@@ -107,7 +200,8 @@ body {
     width: 80vh;
   }
   .back {
-    margin-left: 1rem;
+    margin-left: 5rem;
+    margin-top:-7rem;
   }
   .btn-edit {
     display: flex;
@@ -131,51 +225,170 @@ body {
     opacity: 0.8;
     text-transform: lowercase !important;
 }
-.search  {
-   margin-left: 24rem !important;
-   
+.offer-btn-form {
+ text-align: center;
+ margin-top: 2rem;
+ 
 }
-@media screen and (max-width:360px)
-{
-   .search-place {
-    width: 95px !important;
-    margin-left: -20.5rem;
-   }
-  .home {
-    display: none !important;
-    
-  }
-   .search {
-    margin-top: -2.5rem;
-   }
-   .users {
-    background-color: rgb(246, 246, 247);
-    margin-left: 14rem;
-    height: 160px;
-    width: 80px !important;
+.click-offer {
+  background-color:#694F8E;
+  border: 1px solid black;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  width: 200px;
+  height: 40px;
+  color: white;
 
-   }
+ &:hover {
+ background-color: #B692C2;
+ }
 }
-.search-place {
-    border-radius: 4rem !important;
+.offer-one {
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #FFF8F3;
+  height: 660px;
+  width: 1000px;
 }
+.ofr-icon {
+  font-size: 16rem;
+  color: #CDC1FF;
+}
+.offer-two {
+  margin-top: 2.5rem;
+background-color:  #F5F5F5;
+height: 200px;
+width: 1000px;
+display: flex;
+justify-content: space-between;
+}
+
+
+.fa-person {
+  font-size: 12rem;
+  color :#557C56;
+}
+.offer-onetwo {
+ 
+  display: flex;
+  justify-content: space-between;
+}
+.offer-three {
+  background-color: #F5F5F5;
+  width: 1000px;
+  height: 330px;
+}
+.g-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+.g-infos {
+    margin-left: 1.5rem;
+}
+.offer-form {
+  margin-top: 7rem;
+}
+.user-offer {
+  margin-right: 1rem !important;
+}
+.user-offerdiv {
+  margin-left: 1rem;
+}
+.offer-four {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  width: 1000px;
+  color: white;
+  background-color:#0B8494;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.form-offerbtn {
+  background-color: #708871;
+  
+}
+.staysphere {
+  height: 650px;
+  width: 1000px;
+  background-color: #F5F7F8;
+  margin-top:3rem;
+}
+.sphere {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconsphere {
+  font-size: 15rem;
+  color: rgba(13, 174, 218, 0.874);
+}
+.staysphere-two{
+  height: 700px;
+  width: 1000px;
+  background-color: #F5F7F8;
+  margin-top:3rem;
+  margin-bottom: 3rem;
+}
+.fut {
+  font-size: 15rem;
+}
+.golf {
+  height: 800px;
+  width: 1000px;
+  background-color: #F5EFFF;
+  margin-bottom: 2.5rem;
+}
+.eventss {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  height: 980px;
+  width: 1000px;
+  background-color: #FFF8E8;
+}
+.eventware {
+  font-size: 15rem;
+   color: #624E88;
+}
+.golficon {
+  font-size: 15rem;
+  color: #EDE8DC;
+}
+.baseball {
+  font-size: 15rem;
+  color: #EAD8B1 ;
+}
+
 @media screen and (max-width:430px)
 {
-   .search-place {
-    width: 95px !important;
-    margin-left: -20.5rem;
+   .home {
+    font-size: 1rem !important;
    }
-  .home {
-    display: none !important;
-  }
-   .search {
-    margin-top: -2.5rem;
+   .fa-compass {
+    font-size: 1rem !important;
    }
-   .users {
-    background-color: rgb(246, 246, 247);
-    margin-left: 14rem;
-    height: 160px;
-    width: 80px !important;
-
+   .title {
+   margin-right: 7rem !important;
+    font-size: 0.3rem !important;
+    margin-top: -2.3rem;
+    padding: 0.2rem !important;
+    text-align: center !important;
+   }
+   .searchh {
+font-size: 0.6rem !important;
+   }
+   .infoo {
+   display: none;
+   }
+   .dropdown {
+   
+    margin-left: 15rem !important;
+    margin-top: -2.3rem;
+   }
+   .maiiin {
+    margin-right: 15rem !important;
    }
 }

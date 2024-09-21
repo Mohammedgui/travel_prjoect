@@ -72,20 +72,26 @@ module.exports.deleteListing = async (req, res) => {
     req.flash("success","listing is deleted");
     res.redirect("/listings");
   };
-  module.exports.Search= async(req,res) => {
-    try {
-      // Assuming Listing is your model and 'location' is a field in your collection
-      let listing = await Listing.findOne({ location: req.body.location }); // Use `location` directly here
-    
-      if (!listing) {
-        return res.redirect("/listings"); // Redirect and exit the function
-      }
-    
-      // If listing is found, send a response
-      res.send("found");
-    } catch (error) {
-      // Handle errors
-      console.error(error); // Log the error for debugging
-      res.status(500).send("Internal server error"); // Send an error response
-    }
-  }
+ module.exports.accamodation  = async(req,res) => {
+  req.flash("success","you have been redirected to accamadations")
+  res.render("listings/accamadation.ejs");
+ };
+ module.exports.offers  = async(req,res) => {
+  res.render("listings/offer.ejs");
+ };
+ module.exports.offer = async(req,res) => {
+  req.flash("success","Thank you......, your information has been saved");
+  res.render("listings/offer.ejs");
+ };
+ module.exports.sphere = async(req,res) => {
+  res.render("listings/staysphere.ejs");
+ };
+ module.exports.things = async(req,res) => {
+  res.render("listings/things.ejs");
+ };
+ module.exports.golf= async(req,res) => {
+  res.render("listings/golf.ejs");
+ };
+ module.exports.event= async(req,res) => {
+  res.render("listings/event.ejs");
+ };

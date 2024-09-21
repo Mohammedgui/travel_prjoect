@@ -1,55 +1,72 @@
 <style>
-  .btn-search {
-   background-color: #fe424d;
-   color: #fff;
-   border-radius: 25px;
-  padding: 0 1rem 0 1rem;
+  .home {
+   font-size: 1.5rem;
+
+   color : #8644A2;
   }
-  .btn-search:hover {
-   background-color: #fe424d;
-   color: #fff;
+ .dropdown-toggle {
+background-color: white;
+color: gray;
+  border: 1px solid gray;
+  border-radius: 1rem;
+ }
+ .searchh {
+  color:  #8644A2;
+  font-size: 1.4rem;
+ }
+.dropdown {
+  margin-right: 4rem;
+}
+
+  .usser {
+    font-size: 1.7rem;
   }
-  .btn-search i {
-    display: inline;
+  .dropdown-menu , a :hover {
+    background-color: rgba(255, 255, 255, 0.737);
+
   }
-  #bbtn {
-    border-radius: 25px;
+  .infoo {
+    margin-left: 4rem;
   }
-</style>
+
+ .title {
+  margin-left : 10rem;
+  border: 1px solid gray;
+  padding: 0.5rem;
+  border-radius: 20%;
+  border-top-left-radius:15px ;
+  border-bottom-left-radius:15px ;
+  border-top-right-radius:15px ;
+  border-bottom-right-radius:15px ;
+ }
+  
+  </style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
    
-    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    </button>
-    
-    
-      <div class="navbar-nav home">
-        <a class="nav-link" href="/listings">Home</a>
-      </div>
-      
-      <div class="navbar-nav ms-auto">
-        <form class="d-flex search " action="/listings/search" role="search" method="GET">
-          <input  name="listing[country]" class="form-control me-2 search-place" type="search" placeholder="Search destination" aria-label="Search">
-          <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-        </form>
-     
-    </div>
-      <div class="collapse navbar-collapse users" id="navbarNavAltMarkup">
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new">Add new listings</a>
-        <% if(!currUser) { %>
-          <a class="nav-link "  href="/signup"><b>signup</b></a>
-          <a class="nav-link" href="/login"><b>login</b></a>
+    <a class="navbar-brand home" href="/listings"><i class="fa-solid fa-mountain-city fa-compass"></i><b>StaySphere</b></a>
 
-      <%  } %>
-      <% if(currUser) { %>
-        
-        <a class="nav-link" href="/logout"><b>logout</b></a>
+  <div class="title"><b> Any where  &nbsp;  &nbsp;  | &nbsp;   Any week</b>  &nbsp;  |&nbsp;  &nbsp; Add guest &nbsp;  &nbsp;   &nbsp;   <i class="fa-solid fa-magnifying-glass searchh"></i></div>
+  <div class="infoo"><b>StaySphere &nbsp; your &nbsp;home</b>  &nbsp; &nbsp;  &nbsp; &nbsp; <i class="fa-solid fa-globe"></i></div>
+  <!doctype html>
+  
+ <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-bars barrs"></i>
+        &nbsp; &nbsp;
+        <i class="fa-solid fa-circle-user usser"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/listings/new">Add new Listing</a></li>
+        <% if(!currUser) { %>
+        <li><a class="dropdown-item" href="/signup">signup</a></li>
+        <li><a class="dropdown-item" href="/login">login</a></li>
         <%  } %>
-      </div>
+        <% if(currUser) { %>
+        <li><a class="dropdown-item" href="/logout">logout</a></li>
+        <%  } %>
+      </ul>
     </div>
-   
   </div>
 </nav>
+

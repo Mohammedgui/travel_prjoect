@@ -1,32 +1,70 @@
 <% layout("/layouts/biolerplate") %> <%= success %>
 <style>
-  #filters {
+  .filters {
     display: flex;
     flex-wrap: wrap;
-    
   }
+  /* #filt {
+    margin-top: 3rem !important;
+  } */
+  .explore {
+   background-color: #BC7FCD;
+    color: white;
+    border: 1px solid  gray;
+  border-radius: 15px;
+   width: 10rem;
+  }
+  .list {
+    margin-top: 4rem !important;
+  }
+.travelll  {
+  height: 200px;
+  width: 300px;
+}
   .filter {
     text-align: center;
     margin-left: 2rem;
     margin-top: 1rem;
     opacity: 0.5;
   }
+  .ui-icons ,a {
+    color: black;
+    text-decoration: none;
+    margin-left: 3px;
+ margin-top: 1.2rem;
+ font-weight: 400 !important;
+ 
+    }
+
+  
   .filter p {
    font-size: 0.7rem;
   }
   .filter:hover {
       opacity: 1;
       cursor: pointer;
-      text-decoration: underline ;
+    text-decoration: underline;
   }
   .tax-info {
     display: none;
   }
+  .underrline {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight: 6rem;
+  }
+  .underrline:hover {
+    text-decoration: underline;
+    font-weight: 4rem;
+  }
   .tax-toggle {
     margin-top: 1rem;
+    background-color:  #BC7FCD;
+    font-weight: 3rem !important;
+    color: white;
     border: 1px solid black;
+    margin-left: 1.5rem;
     border-radius:1rem;
-    margin-left: 5rem;
     height: 3rem;
     width: 13rem;
   }
@@ -35,50 +73,34 @@
   margin-top: 0.5rem;
   margin-right:0.5rem;
 }
+.ui-aicons {
+  font-size: 1.5rem;
+}
 </style>
-<div id="filters">
-  <div class="filter">
-    <i class="fa-solid fa-fire"></i> <br>
-   <p> Trending</p>
-  </div>
-  <div class="filter">
-    <i class="fa-solid fa-bed"></i><br>
-   <p>Rooms  </p>
-  </div>
-</a>
-  <div class="filter">
-    <i class="fa-solid fa-water"></i><br>
- <p> Amazing pools</p>
-  </div>
-  <div class="filter">
-    <i class="fa-solid fa-plant-wilt"></i> <br>
-    <p>Farms</p>
-  </div>
-  <div class="filter">
-    <i class="fa-solid fa-mountain-city"></i><br>
-  <p> cities</p>
-  </div>
- <div class="filter">
-    <i class="fa-solid fa-campground"></i><br>
-   <p> Camps</p>
-  </div> 
-<div class="tax-toggle">
+<div class="filters">
+<div class="ui-icons">
+<b class="underrline"><a href="/listings/accommodations" > Accamodations  </a>  </b> &nbsp; &nbsp;  |  
+<b class="underrline"><a href="/listings/offer">Offers &nbsp; &nbsp;  | </a> </b>
+<b class="underrline"><a href="/listings/sphere"> StaySphere Bay  &nbsp; &nbsp;  | </a> </b>
+<b class="underrline"><a href="/listings/things">Things to do &nbsp; &nbsp;  | </a> </b>
+<b class="underrline"><a href="/listings/golf">Golf  &nbsp; &nbsp;  | </a> </b>
+<b class="underrline"><a href="/listings/event">Events  </a> </b>
+</div>
+
+<div class="tax-toggle ">
   <div class="form-check-reverse form-switch">
     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-    <label class="form-check-label" for="flexSwitchCheckDefault">Display after taxes</label>
+    <label class="form-check-label" for="flexSwitchCheckDefault"><b>Display after taxes</b></label>
   </div>
  
 </div>
   
 </div>
   <body>
-    <!-- <h3>All Listings</h3> -->
-    <!-- <form method="GET" action="/listings/new">
-      <button>Create New Listing</button>
-    </form> -->
-    <div class="row row-cols-lg-3 row-col-md-2 row-cols-sm-1 mt-3">
+   
+    <div class="row row-cols-lg-3 row-col-md-2 row-cols-sm-1 mt-3 list">
       <% for(let listing of allListings) { %>
-        <a href="/listings/<%=listing._id%>" class="listing-link">
+         <a href="/listings/<%=listing._id%>" class="listing-link">
           <div class="card col listing-card" style="width: 20rem;">
             <img src="<%=listing.image.url%>" class="card-img-top" alt="listing_image" style="height: 20rem;" >
             <div class="card-img-overlay"></div>
@@ -86,7 +108,7 @@
               <p class="card-text">
              <b>  <%= listing.title %> </b>  <br/>
             
-             <!-- -->
+            
             
 
               <!-- Your EJS template -->
@@ -104,10 +126,9 @@
               <br/>  -->
            
 
-          
-            </p>
-
             
+            </p>
+            <button class="explore"><b> Explore details...</b></button>
               <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
           </div>
@@ -115,7 +136,6 @@
         
         <% } %>
     </div>
-   
   
   </body>
 </html>

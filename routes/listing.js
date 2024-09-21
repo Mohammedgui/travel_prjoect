@@ -16,8 +16,13 @@ router.route("/")
 
 //new route
 router.get("/new", isLoggedIn,listingcontroller.rendernewform);
-router.get("/search",listingcontroller.Search);
-
+router.get("/accommodations",listingcontroller.accamodation);
+router.get("/offers",listingcontroller.offers);
+router.get("/offer",listingcontroller.offer);
+router.get("/sphere",listingcontroller.sphere);
+router.get("/things",listingcontroller.things);
+router.get("/golf",listingcontroller.golf);
+router.get("/event",listingcontroller.event);
 
 router.route("/:id")
 .get(wrapAsync(listingcontroller.showListing))
